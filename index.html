@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Валютный обменник</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <img src="./img/logo.svg" alt="logo" class="logo" />
+        <nav class="main-nav">
+          <ul class="list">
+            <li class="item">
+              <a href="#" class="item-link">Компания</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Блог</a>
+            </li>
+            <li class="item">
+              <a href="#" class="item-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.header navigation -->
+        <div class="authorization">
+          <button class="login">Вход</button>
+          <button class="registration">Регистрация</button>
+        </div>
+        <!-- /.login/sign-up buttons -->
+      </header>
+      <main class="main-section">
+        <h1 class="main-title">Мультивалютный обменный сервис 24/7</h1>
+        <p class="main-subtitle">Быстрый обмен без скрытых комиссий</p>
+        <div class="calculator">
+          <div class="give-take">
+            <div class="give-block">
+              <h3 class="give-main-text">Вы отдаете</h3>
+              <div class="give-sum-block">
+                <p class="text-sum">Сумма</p>
+                <input
+                  class="give-money-counter"
+                  type="number"
+                  placeholder="0"
+                  id="inputSumm"
+                />
+                <div class="money-value-and-logo">
+                  <div class="give-line line"></div>
+                  <img
+                    src="img/values/yandex.svg"
+                    alt="currency logo"
+                    class="money-logo-left"
+                  />
+                  <select
+                    name="money-currency"
+                    class="give-money-currency gmc-left"
+                    id="give-money-type"
+                  >
+                    <option value="Yandex">Yandex(RUB)</option>
+                    <option value="Ethereum">ETH</option>
+                    <option value="Bitcoin">BTC</option>
+                    <option value="Sberbank">Sberbank(RUB)</option>
+                    <option value="Privatebank">UAH</option>
+                    <option value="Paypal">Paypal(USD)</option>
+                    <option value="PM">PM(USD)</option>
+                    <option value="QIWI">Qiwi(RUB)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- /.give block -->
+            <img
+              src="./img/calc-arrow.svg"
+              alt="calc arrow"
+              class="calc-arrow"
+            />
+            <div class="take-block">
+              <h3 class="take-main-text">
+                Вы получаете
+                <span class="take-main-text-subtitle"
+                  >с учетом комиссии ПС (0.5%)</span
+                >
+              </h3>
+              <div class="take-sum-block">
+                <p class="text-sum">Сумма</p>
+                <div id="money-result" class="take-money-counter">0</div>
+                <div class="money-value-and-logo">
+                  <div class="take-line line"></div>
+                  <img
+                    src="img/values/yandex.svg"
+                    alt="currency logo"
+                    class="money-logo-right"
+                  />
+                  <select
+                    name="money-currency"
+                    class="give-money-currency"
+                    id="take-money-type"
+                  >
+                    <option value="Yandex">Yandex(RUB)</option>
+                    <option value="Ethereum">ETH</option>
+                    <option value="Bitcoin">BTC</option>
+                    <option value="Sberbank">Sberbank(RUB)</option>
+                    <option value="Privatebank">UAH</option>
+                    <option value="Paypal">Paypal(USD)</option>
+                    <option value="PM">PM(USD)</option>
+                    <option value="QIWI">Qiwi(RUB)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- /.take block -->
+          </div>
+          <!-- /.give-take block -->
+          <button class="exchange-button" id="button">Обменять</button>
+        </div>
+        <!-- /.calculator -->
+      </main>
+    </div>
+    <div class="wrapper2">
+      <section class="features">
+        <div class="feature safety">
+          <img
+            src="img/features/safety.png"
+            alt=""
+            class="safety-img feature-img"
+          />
+          <h3 class="safety-title features-titles">Безопасность</h3>
+          <p class="safety-text feature-subtitle">
+            Усиленная безопасность ваших обменов, усиленная безопасность от
+            мошенников!
+          </p>
+        </div>
+        <div class="feature referal">
+          <img
+            src="img/features/referal.png"
+            alt=""
+            class="referal-img feature-img"
+          />
+          <h3 class="referal-title features-titles">Реферальная система</h3>
+          <p class="referal-text feature-subtitle">
+            На сервисе работает партнерская программа , за каждый обмен
+            приведенного вами клиента, вы получаете 0.5% с нашей прибыли.
+          </p>
+        </div>
+        <div class="feature support">
+          <img
+            src="img/features/support.png"
+            alt=""
+            class="support-img feature-img"
+          />
+          <h3 class="support-title features-titles">Онлайн поддержка</h3>
+          <p class="support-text feature-subtitle">
+            Четыре вида поддержки для наших клиентов: Телеграмм канал, E-mail
+            поддержка, и мобильный номер (Viber).
+          </p>
+        </div>
+      </section>
+      <!-- /.features -->
+
+      <section class="history">
+        <div class="history-text-part">
+          <h2 class="history-title">
+            Сервис обмена электронных валют с 5-летней историей
+          </h2>
+          <p class="history-text">
+            За время работы мы приобрели репутацию проверенного партнера и
+            делаем все возможное, чтобы ваши впечатления от нашего сервиса были
+            только благоприятными.
+          </p>
+        </div>
+        <img
+          src="img/history-img.png"
+          alt="history part image"
+          class="history-img"
+        />
+      </section>
+      <!-- /.history -->
+
+      <section class="reserve">
+        <h2 class="reserve-title">Резерв валюты</h2>
+        <div class="reserve-values">
+          <div class="value yandex">
+            <div class="value-img-wrapper">
+              <img
+                src="img/values/yandex.svg"
+                alt="yandex value"
+                class="value-img"
+              />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">Yandex RUB</p>
+              <p class="value-number" id="value-number-yandex">900549</p>
+            </div>
+          </div>
+          <div class="value ethereum">
+            <div class="value-img-wrapper">
+              <img
+                src="img/values/ethereum.svg"
+                alt="ethereum value"
+                class="value-img"
+              />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">Ethereum ETH</p>
+              <p class="value-number" id="value-number-ethereum">123</p>
+            </div>
+          </div>
+          <div class="value bitcoin">
+            <div class="value-img-wrapper">
+              <img
+                src="img/values/bitcoin.svg"
+                alt="bitcoin value"
+                class="value-img"
+              />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">Bitcoin BTC</p>
+              <p class="value-number" id="value-number-bitcoin">0.63333439</p>
+            </div>
+          </div>
+          <div class="value sberbank">
+            <div class="value-img-wrapper">
+              <img
+                src="img/values/sberbank.png"
+                alt="sberbank value"
+                class="value-img"
+              />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">Сбербанк RUB</p>
+              <p class="value-number" id="value-number-sberbank">142666</p>
+            </div>
+          </div>
+          <div class="value privatebank">
+            <div class="value-img-wrapper">
+              <img
+                src="img/values/privatebank.svg"
+                alt="privatebank"
+                class="value-img"
+              />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">Приват 24 UAH</p>
+              <p class="value-number" id="value-number-privatebank">142666</p>
+            </div>
+          </div>
+          <div class="value paypal">
+            <div class="value-img-wrapper">
+              <img
+                src="img/values/paypal.svg"
+                alt="paypal value"
+                class="value-img"
+              />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">PayPal USD</p>
+              <p class="value-number" id="value-number-paypal">5139.58</p>
+            </div>
+          </div>
+          <div class="value pm-usd">
+            <div class="value-img-wrapper">
+              <img src="img/values/pm-usd.svg" alt="pm-usd" class="value-img" />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">PM USD</p>
+              <p class="value-number" id="value-number-pm">3192.22</p>
+            </div>
+          </div>
+          <div class="value qiwi">
+            <div class="value-img-wrapper">
+              <img
+                src="img/values/qiwi.svg"
+                alt="qiwi value"
+                class="value-img"
+              />
+            </div>
+            <div class="value-text-block">
+              <p class="value-text">Qiwi RUB</p>
+              <p class="value-number" id="value-number-qiwi">99243.321</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.reserve -->
+
+      <section class="feedback">
+        <h2 class="feedback-title">Что клиенты говорят о нас</h2>
+        <div class="feedback-cases">
+          <div class="feedback-slide">
+            <p class="feedback-text">
+              Киви переправил деньги не на кошелек а на номер мтс будьте
+              внимательны.даже в этом случаи делают возврат и переводят на
+              приват.особая благодарность оператору Марии.
+            </p>
+            <h3 class="feedback-author">Jacob Robertson</h3>
+            <p class="feedback-date">20.02.2020, 12:10</p>
+          </div>
+
+          <div class="feedback-slide">
+            <p class="feedback-text">
+              3-й раз выполняю обмен. все как всегда на отлично! транзакции
+              выполняются в течение 15-20 мин. что очень быстро + лучший ценник!
+            </p>
+            <h3 class="feedback-author">Morris Robertson</h3>
+            <p class="feedback-date">17.02.2020, 18:51</p>
+          </div>
+        </div>
+      </section>
+      <!-- /.feedback -->
+
+      <section class="proposition">
+        <div class="proposition-text-block">
+          <h2 class="proposition-title">
+            Будем рады предоставить Вам качественный обмен валют на нашем
+            сервисе!
+          </h2>
+          <p class="proposition-subtitle">Начните обмен прямо сейчас</p>
+          <button class="proposition-button">Начать обмен</button>
+        </div>
+      </section>
+      <!-- /.proposition -->
+
+      <footer class="footer">
+        <img src="img/logo.svg" alt="" class="footer-logo" />
+        <nav class="footer-nav">
+          <ul class="footer-list">
+            <li class="footer-item">
+              <a href="#" class="footer-item-link">Карта сайта</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-item-link">Предупреждение</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-item-link">Правила сайта</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-item-link">Обмен</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href="#" class="social-link vk">
+            <img
+              src="img/social_links/vk.svg"
+              alt="vk"
+              class="social-link-img"
+            />
+          </a>
+          <a href="#" class="social-link fb">
+            <img
+              src="img/social_links/facebook.svg"
+              alt="facebook"
+              class="social-link-img"
+            />
+          </a>
+          <a href="#" class="social-link instagram">
+            <img
+              src="img/social_links/instagram.svg"
+              alt="vk"
+              class="social-link-img"
+            />
+          </a>
+        </div>
+        
+      </footer>
+      <p class="copyright">Сервис обмена электронных валют</p>
+    </div>
+
+      <script src="js/main.js"></script>
+    
+  </body>
+</html>
