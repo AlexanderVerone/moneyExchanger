@@ -138,7 +138,7 @@ let paypalReserveValue = document.getElementById('value-number-paypal');
 let pmReserveValue = document.getElementById('value-number-pm');
 let qiwiReserveValue = document.getElementById('value-number-qiwi');
 
-const reserveMoney = {
+let reserveMoney = {
   Yandex: 900549,
   Ethereum: 123,
   Bitcoin: 0.63333439,
@@ -149,6 +149,7 @@ const reserveMoney = {
   QIWI: 99243.32,
 };
 
+const updateReserve = () => {
 yandexReserveValue.innerHTML = reserveMoney.Yandex;
 ethereumReserveValue.innerHTML = reserveMoney.Ethereum;
 bitcoinReserveValue.innerHTML = reserveMoney.Bitcoin;
@@ -157,20 +158,26 @@ privatebankReserveValue.innerHTML = reserveMoney.Privatebank;
 paypalReserveValue.innerHTML = reserveMoney.Paypal;
 pmReserveValue.innerHTML = reserveMoney.PM;
 qiwiReserveValue.innerHTML = reserveMoney.QIWI;
+};
 
 const moneyReserveChange = () => {
-  let x;
+  let plusValue;
+  let minusValue;
   let inputValueAsNumber;
   if (inputMoneyType.value === outputMoneyType.value) {
     alert('Выберите разные валюты');
   } else {
     inputValueAsNumber = parseInt(inputSumm.value, 10);
-    x = reserveMoney[inputMoneyType.value] + inputValueAsNumber;
-    console.log(inputValueAsNumber);
-    console.log(x);
-    //reserveMoney[outputMoneyType.innerHTML] - outputMoneyType.innerHTML
+    plusValue = reserveMoney[inputMoneyType.value] + inputValueAsNumber;
+    minusValue = reserveMoney[outputMoneyType.value] - result.innerHTML;
+    console.log(plusValue);
+    console.log(minusValue);
+    reserveMoney[inputMoneyType.value] = plusValue;
+    updateReserve();
   }
 };
+
+
 
 exchangeButton.addEventListener('click', () => {
   moneyReserveChange();
