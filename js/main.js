@@ -162,16 +162,12 @@ qiwiReserveValue.innerHTML = reserveMoney.QIWI;
 
 const moneyReserveChange = () => {
   let plusValue;
-  let minusValue;
   let inputValueAsNumber;
   if (inputMoneyType.value === outputMoneyType.value) {
     alert('Выберите разные валюты');
   } else {
     inputValueAsNumber = parseInt(inputSumm.value, 10);
     plusValue = reserveMoney[inputMoneyType.value] + inputValueAsNumber;
-    minusValue = reserveMoney[outputMoneyType.value] - result.innerHTML;
-    console.log(plusValue);
-    console.log(minusValue);
     reserveMoney[inputMoneyType.value] = plusValue;
     updateReserve();
   }
