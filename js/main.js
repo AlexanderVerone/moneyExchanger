@@ -66,7 +66,7 @@ const leftLogoChange = () => {
       leftLogo.src = 'img/values/bitcoin.svg';
       break;
     case 'Sberbank':
-      leftLogo.src = 'img/values/sber-logo.svg';
+      leftLogo.src = 'img/values/sberbank.png';
       break;
     case 'Privatebank':
       leftLogo.src = 'img/values/privatebank.svg';
@@ -98,7 +98,7 @@ const rightLogoChange = () => {
       rightLogo.src = 'img/values/bitcoin.svg';
       break;
     case 'Sberbank':
-      rightLogo.src = 'img/values/sber-logo.svg';
+      rightLogo.src = 'img/values/sberbank.png';
       break;
     case 'Privatebank':
       rightLogo.src = 'img/values/privatebank.svg';
